@@ -2,4 +2,111 @@
     font-family:'thuluth-decorated';
     font-family:'cairo-bold';
 *****/
-/** Global Style **/
+/**Start Global Style **/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "cairo-bold";
+  outline: none;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+body {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+ul,
+li {
+  list-style: none;
+}
+.container {
+  max-width: 1450px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+section {
+  padding: 70px 0;
+}
+/**End Global Style **/
+
+/**Start Header **/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: 0.5s all ease-in-out;
+  -webkit-transition: 0.5s all ease-in-out;
+  -moz-transition: 0.5s all ease-in-out;
+  -ms-transition: 0.5s all ease-in-out;
+  -o-transition: 0.5s all ease-in-out;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  color: #fff;
+  transition: 0.5s all ease-in-out;
+  -webkit-transition: 0.5s all ease-in-out;
+  -moz-transition: 0.5s all ease-in-out;
+  -ms-transition: 0.5s all ease-in-out;
+  -o-transition: 0.5s all ease-in-out;
+}
+.header .active {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.header .active .container {
+  height: 80px;
+}
+.header ul {
+  display: flex;
+}
+.header ul li {
+  position: relative;
+  cursor: pointer;
+}
+.header ul li::after{
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background-color: #fff;
+  height: 2px;
+  transition: .3s all ease-in-out;
+  -webkit-transition: .3s all ease-in-out;
+  -moz-transition: .3s all ease-in-out;
+  -ms-transition: .3s all ease-in-out;
+  -o-transition: .3s all ease-in-out;
+  width: 0;
+}
+.header ul li:hover::after,
+.header ul li:active::after{
+  width: 100%;
+}
+.header .bars {display: none;}
+.header li:not(:first-of-type),
+.header li:not(:last-of-type){
+  margin: 0 15px;
+}
+.header .logo {
+  font-family: 'thuluth-decorated';
+  font-size: 55px;
+  cursor: pointer;
+}
+/**End Header **/
+
+/**Start Main Section **/
+.main {
+  background: url(./images/1.jpg) center center/cover no-repeat;
+}
+.main .container{
+  min-height: 100vh;
+}
+
+/**End Main Section **/
+
